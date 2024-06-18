@@ -1,0 +1,11 @@
+services:
+  db:
+    image: mysql:8.0.30-debian
+    platform: linux/amd64
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: eventsApi
+    ports:
+      - "3308:3306"
+    volumes:
+      - ./db:/var/lib/mysql
