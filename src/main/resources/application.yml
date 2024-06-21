@@ -1,0 +1,15 @@
+spring:
+  application:
+    name: eventsApi
+  datasource:
+    url: jdbc:mysql://localhost:3308/eventsApi
+    username: root
+    password: root
+
+logging:
+  level:
+    org.flywaydb: DEBUG
+
+aws:
+  region: us-east-1
+  bucket: events-api-bucket
