@@ -14,16 +14,17 @@ import lombok.Setter;
 @AllArgsConstructor
 public class Address {
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
-    private String street;
-    private String city;
-    private String state;
-    private String country;
-    private String zipCode;
+  @Id
+  @GeneratedValue(strategy = GenerationType.IDENTITY)
+  private Long id;
 
-    @ManyToOne
-    @JoinColumn(name = "event_id")
-    private Event event;
+  private String street;
+  private String city;
+  private String state;
+  private String country;
+  private String zipCode;
+
+  @ManyToOne
+  @JoinColumn(name = "event_id")
+  private Event event;
 }

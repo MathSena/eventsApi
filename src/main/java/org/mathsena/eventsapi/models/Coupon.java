@@ -14,15 +14,14 @@ import lombok.Setter;
 @AllArgsConstructor
 public class Coupon {
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
-    private Integer discount;
-    private String date;
-    @ManyToOne
-    @JoinColumn(name = "event_id")
-    private Event event;
+  @Id
+  @GeneratedValue(strategy = GenerationType.IDENTITY)
+  private Long id;
 
+  private Integer discount;
+  private String date;
+
+  @ManyToOne
+  @JoinColumn(name = "event_id")
+  private Event event;
 }
-
-
